@@ -1,0 +1,2013 @@
+/**
+* Template Name: Imperial - v5.8.0
+* Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #c31b1b;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #F3807D;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Prelaoder */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+@media (prefers-color-scheme: dark) {
+  #preloader {
+    background: #000 url("../img/preloader.svg") no-repeat center center;
+  }
+}
+
+
+.pointer {
+  cursor: url('data:image/png;base64,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'), auto;
+
+  /*cursor: url("../img/logo/CURSORE_FULMINE.svg"), auto;*/
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #c31b1b;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #F3807D;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#hero {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/fotonuove/foto-tutti.jpg) top center;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero .hero-logo {
+  margin: 20px;
+  text-align: center;
+}
+
+  #hero .hero-logo img {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  #hero .hero-logo img {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 50%;
+  }
+}
+
+
+/* Portrait and Landscape ---- iPhone 5, 5S, 5C and 5SE*/
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #hero .hero-logo img {
+      padding-top: 160px;
+      padding-bottom: 160px;
+      max-width: 90%;
+    }
+}
+    
+/* Landscape ---- iPhone 5, 5S, 5C and 5SE*/
+@media screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #hero .hero-logo img {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-width: 50%;
+    }
+}
+
+/*@media screen and ( min-width: 700px ) and ( max-height: 300px )
+{
+  #hero .hero-logo img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 60%;
+  }
+}*/
+
+/* Altri schermi
+https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ 
+*/
+
+
+#hero .hero-container {
+  background: rgba(0, 0, 0, 0.2);
+  display: table-cell;
+  padding: 100;
+  /*text-align: center;*/
+  vertical-align: middle;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-weight: 700;
+  line-height: 48px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero h2 {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 40px;
+  }
+
+}
+
+#hero .rotating>.animated {
+  display: inline-block;
+}
+
+#hero .actions a {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+#hero .btn-get-started {
+  background: #c31b1b;
+  border: 2px solid #c31b1b;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services:hover {
+  background: #c31b1b;
+  border: 2px solid #c31b1b;
+}
+
+#hero .btn-scroll {
+  text-align: center;
+  animation: MoveUpDown 3s linear infinite;
+  position: relative;
+  color: #fff;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+}
+
+#hero .social-pos {
+  text-align: right;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 700px) {
+  #hero .social-pos {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+#hero .errore {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #0d0d0d;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 70px;
+}
+
+@media (max-width: 992px) {
+  #header {
+    height: 60px;
+  }
+}
+
+#header.fixed-top {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  height: 50px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+@media (max-width: 992px) {
+  .scrolled-offset {
+    margin-top: 60px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #c31b1b;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 20px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  text-transform: none;
+  color: #333333;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #c31b1b;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #333333;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #c31b1b;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #c31b1b;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+section {
+  overflow: hidden;
+}
+
+.section-title-w {
+  font-size: 32px;
+  color: #fff;
+  /*text-transform: uppercase;*/
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #111;
+  /*text-transform: uppercase;*/
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-title {
+    color: #fff;
+    /*text-transform: uppercase;*/
+
+  }
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-divider {
+  width: 50px;
+  height: 3px;
+  background: #c31b1b;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Get Started Section
+--------------------------------*/
+#about {
+  background: #fff;
+  padding: 80px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  #about {
+    background: #000;
+  }
+}
+
+#about .about-img {
+  overflow: hidden;
+}
+
+#about .about-img img {
+  max-width: 100%;
+
+}
+
+@media (max-width: 768px) {
+  #about .about-img {
+    height: auto;
+  }
+
+  #about .about-img img {
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+}
+
+#about .about-content {
+  background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  #about .about-content {
+    background: #000;
+  }
+}
+
+#about .about-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+#about .about-text {
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+#about .about-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Services Section
+--------------------------------*/
+
+
+
+#services {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/fotonuove2023/NATURAL_web.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0 60px 0;
+}
+
+#service .h3 {
+  color: #fff;
+}
+
+#services .service-item {
+  margin-bottom: 20px;
+}
+
+#services .service-icon {
+  float: left;
+  background: #c31b1b;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #c31b1b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+
+#services .service-icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+#services .service-item:hover .service-icon {
+  background: #fff;
+}
+
+#services .service-item:hover .service-icon i {
+  color: #c31b1b;
+}
+
+#services .service-title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+
+
+#services .service-title a {
+  color: #111;
+}
+
+#services .service-title a {
+  color: #fff;
+}
+
+
+#services .service-description {
+  margin-left: 80px;
+  line-height: 24px;
+  color: #fff;
+
+}
+
+/* news Section
+--------------------------------*/
+#news {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/fotonuove/nick-andrea.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0 60px 0;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  #news {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/fotonuove/nick-andrea.jpg") center center;
+    background-size: cover;
+    padding: 80px 0 60px 0;
+  }
+}
+
+
+#news .news-item {
+  margin-bottom: 20px;
+}
+
+#news .news-icon {
+  float: left;
+  background: #c31b1b;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #c31b1b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+
+#news .news-icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+#news .news-item:hover .news-icon {
+  background: #fff;
+}
+
+#news .news-item:hover .news-icon i {
+  color: #c31b1b;
+}
+
+#news .news-title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#news .news-title a {
+  color: #111;
+}
+
+#news .news-description {
+  margin-left: 80px;
+  line-height: 24px;
+}
+
+
+
+#news .news-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#news .news-text {
+  color: #fff;
+}
+
+#news .news-btn-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#news .news-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#news .news-btn:hover {
+  background: #c31b1b;
+  border: 2px solid #c31b1b;
+}
+
+#news h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Subscribe Section
+--------------------------------*/
+/* CSS for other than iOS devices */
+/*@supports not (-webkit-touch-callout: none) {
+   
+
+}*/
+
+#subscribe {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fotonuove2023/NATURAL_web.jpg) fixed center center;
+  background-size: cover;
+  padding: 80px 0;
+  min-height: 400px;
+}
+
+  /* CSS specific to iOS devices */ 
+@supports (-webkit-touch-callout: none) {
+  #subscribe {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fotonuove2023/NATURAL_web.jpg) center center;
+    background-size: cover;
+    padding: 80px 0;
+    min-height: 400px;
+  }
+}
+
+
+
+
+
+#subscribe .subscribe-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#subscribe .subscribe-text {
+  color: #fff;
+}
+
+#subscribe .subscribe-btn-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#subscribe .subscribe-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#subscribe .subscribe-btn:hover {
+  background: #c31b1b;
+  border: 2px solid #c31b1b;
+}
+
+#subscribe h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+
+
+
+/* Subscribe2 Section
+--------------------------------*/
+#subscribe2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fotonuove2023/TMF_web.jpg) fixed center center;
+  background-size: cover;
+  padding: 80px 0;
+  min-height: 400px;
+
+}
+
+/* CSS specific to iOS devices */ 
+@supports (-webkit-touch-callout: none) {
+  #subscribe2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fotonuove2023/TMF_web.jpg) center center;
+    background-size: cover;
+    padding: 80px 0;
+    min-height: 400px;
+
+  }
+}
+
+#subscribe2 .subscribe-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#subscribe2 .subscribe-text {
+  color: #fff;
+}
+
+#subscribe2 .subscribe-btn-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#subscribe2 .subscribe-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#subscribe2 .subscribe-btn:hover {
+  background: #c31b1b;
+  border: 2px solid #c31b1b;
+}
+
+#subscribe2 h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Subscribe3 Section
+--------------------------------*/
+#subscribe3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fotonuove2023/CANTAGIRO_web.jpg) fixed center center;
+  background-size: cover;
+  padding: 80px 0;
+  min-height: 400px;
+  
+
+}
+
+/* CSS specific to iOS devices */ 
+@supports (-webkit-touch-callout: none) {
+  #subscribe3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fotonuove2023/CANTAGIRO_web.jpg) center center;
+    background-size: cover;
+    padding: 80px 0;
+    min-height: 400px;
+
+  }
+}
+
+#subscribe3 .subscribe-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#subscribe3 .subscribe-text {
+  color: #fff;
+}
+
+#subscribe3 .subscribe-btn-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#subscribe3 .subscribe-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#subscribe3 .subscribe-btn:hover {
+  background: #c31b1b;
+  border: 2px solid #c31b1b;
+}
+
+#subscribe3 h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Portfolio Section
+--------------------------------*/
+#portfolio {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+}
+
+#portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #666666;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio #portfolio-flters li:hover,
+#portfolio #portfolio-flters li.filter-active {
+  color: #c31b1b;
+}
+
+#portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+#portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+#portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+#portfolio .portfolio-item .portfolio-info p {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+#portfolio .portfolio-item .portfolio-info .preview-link,
+#portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 48px;
+  font-size: 28px;
+  top: calc(50% - 28px);
+  color: #4d4d4d;
+}
+
+#portfolio .portfolio-item .portfolio-info .preview-link:hover,
+#portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #c31b1b;
+}
+
+#portfolio .portfolio-item .portfolio-info .details-link {
+  right: 15px;
+}
+
+#portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 20px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #c31b1b;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #c31b1b;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(51, 51, 51, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/* Testimonials Section
+--------------------------------*/
+#testimonials {
+  background: #f6f6f6;
+  padding: 80px 0;
+}
+
+#testimonials .profile {
+  text-align: center;
+}
+
+#testimonials .profile .pic {
+  border-radius: 50%;
+  border: 6px solid #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+  width: 260px;
+}
+
+#testimonials .profile .pic img {
+  max-width: 100%;
+}
+
+#testimonials .profile h4 {
+  font-weight: 700;
+  color: #c31b1b;
+  margin-bottom: 5px;
+}
+
+#testimonials .profile span {
+  color: #333333;
+}
+
+#testimonials .quote {
+  position: relative;
+  background: #fff;
+  padding: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#testimonials .quote b {
+  display: inline-block;
+  font-size: 22px;
+  left: -9px;
+  position: relative;
+  top: -8px;
+}
+
+#testimonials .quote small {
+  display: inline-block;
+  right: -9px;
+  position: relative;
+  top: 4px;
+}
+
+/*--------------------------------------------------------------
+# Our Team Section
+--------------------------------------------------------------*/
+.team .member {
+  position: relative;
+}
+
+.team .member .member-img {
+  margin: 0 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .team .member .member-img {
+    margin: 0 60px;
+  }
+}
+
+.team .member .member-img img {
+  position: relative;
+  z-index: 1;
+}
+
+.team .member .member-img .social {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  .team .member .member-img .social { /*Aggiunta per iPhone*/
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding-bottom: 20px;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.team .member .member-img .social a {
+  transition: 0.3s;
+  color: #fff;
+  font-size: 20px;
+  margin: 0 8px;
+}
+
+.team .member .member-img .social a:hover {
+  color: #c31b1b;
+}
+
+.team .member .member-info {
+  margin-top: 30px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #3a3a3b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .team .member .member-info h4 {
+    color: #ccc;
+  }
+}
+
+.team .member .member-info span {
+  font-style: italic;
+  display: block;
+  font-size: 15px;
+  color: #838893;
+  margin-bottom: 10px;
+}
+
+.team .member .member-info p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.team .member:hover .member-img .social {
+  padding-bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Team Section
+--------------------------------*/
+#team {
+  background: #fff;
+  padding: 80px 0 60px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  #team {
+    background: #000;
+  }
+}
+
+/* Contact Section
+--------------------------------*/
+#contact {
+  background: #f7f7f7;
+  padding: 80px 0 120px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  #contact {
+    background: #414040
+  }
+}
+
+#contact .info {
+  color: #333333;
+}
+
+#contact .info i {
+  font-size: 32px;
+  color: #c31b1b;
+  float: left;
+  line-height: 0;
+}
+
+#contact .info p {
+  padding: 0 0 10px 50px;
+  line-height: 24px;
+}
+
+#contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+#contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #d21818;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+#contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #d21818;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+#contact .php-email-form input,
+#contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#contact .php-email-form input::focus,
+#contact .php-email-form textarea::focus {
+  background-color: #c31b1b;
+}
+
+#contact .php-email-form button[type=submit] {
+  background: #c31b1b;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+#contact .php-email-form button[type=submit]:hover {
+  background: #F3807D;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 30px 0;
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: gray;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #111;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Custom CSS */
+
+.social-linkss a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  
+}
+
+.social-linkss a:hover {
+  background: #c31b1b;
+  text-decoration: none;
+
+}
+
+.logo-navbar {
+  padding-top: 10px;
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 20px 0 30px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact .info-item {
+    box-shadow: 0 0 25px rgba(187, 187, 187, 0.5);
+    background: #1c1c1c;
+  }
+}
+
+.contact .info-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  line-height: 0;
+  color: var(--color-primary);
+  border-radius: 50%;
+  border: 2px dotted #ffd565;
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  color: #6c757d;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact .info-item h3 {
+    color: #fff;
+
+  }
+}
+
+.contact .info-item p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 20px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #df1529;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #059652;
+  border-top-color: #fff;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: rgba(254, 185, 0, 0.8);
+}
+
+
+
+
+ /* video needed to position the button. Adjust the width as needed */
+ .video {
+  position: relative;
+}
+
+/* Make the image responsive */
+.video img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the video/image */
+.video .btn {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.video .btn:hover {
+  color: #df1529;
+} 
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* SPAZIO
+
+/* ascolta Section
+--------------------------------*/
+#ascolta {
+  background: #f7f7f7;
+  padding: 80px 0 40px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  #ascolta {
+    background: #414040
+  }
+}
+
+#ascolta .info {
+  color: #333333;
+}
+
+#ascolta .info i {
+  font-size: 32px;
+  color: #c31b1b;
+  float: left;
+  line-height: 0;
+}
+
+#ascolta .info p {
+  padding: 0 0 10px 50px;
+  line-height: 24px;
+}
+
+#ascolta .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#ascolta .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+#ascolta .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #d21818;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#ascolta .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+#ascolta .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #d21818;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+#ascolta .php-email-form input,
+#ascolta .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#ascolta .php-email-form input::focus,
+#ascolta .php-email-form textarea::focus {
+  background-color: #c31b1b;
+}
+
+#ascolta .php-email-form button[type=submit] {
+  background: #c31b1b;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+#ascolta .php-email-form button[type=submit]:hover {
+  background: #F3807D;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# ascolta Section
+--------------------------------------------------------------*/
+.ascolta .info-item {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 20px 0 30px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ascolta .info-item {
+    box-shadow: 0 0 25px rgba(187, 187, 187, 0.5);
+    background: #1c1c1c;
+  }
+}
+
+.ascolta .info-item i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  line-height: 0;
+  color: var(--color-primary);
+  border-radius: 50%;
+  border: 2px dotted #ffd565;
+}
+
+.ascolta .info-item h3 {
+  font-size: 20px;
+  color: #6c757d;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ascolta .info-item h3 {
+    color: #fff;
+
+  }
+}
+
+.ascolta .info-item p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.ascolta .php-email-form {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.ascolta .php-email-form .form-group {
+  padding-bottom: 20px;
+}
+
+.ascolta .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #df1529;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.ascolta .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.ascolta .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.ascolta .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.ascolta .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #059652;
+  border-top-color: #fff;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.ascolta .php-email-form input,
+.ascolta .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.ascolta .php-email-form input:focus,
+.ascolta .php-email-form textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.ascolta .php-email-form input {
+  height: 44px;
+}
+
+.ascolta .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.ascolta .php-email-form button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.ascolta .php-email-form button[type=submit]:hover {
+  background: rgba(254, 185, 0, 0.8);
+}
