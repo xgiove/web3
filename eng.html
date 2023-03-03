@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>XGIOVE - Official Website (Eng)</title>
+  <title>XGIOVE - Official Website</title>
   <meta name="description" content="Landing Page della band marchigiana XGIOVE! (per giove)">
   <meta name="keywords" content="XGIOVE, xgiove!, XGIOVE!, x giove, pergiove, per giove, per giove band, pergiove band,band, group band, cicirinella, addio addio amici addio, canzone dell'arrivederci">
   <meta name="author" content="Paolo Rosettani">
@@ -52,8 +52,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Canonical Page -->
-  <link rel="canonical" href="https://xgiove.it/index.html" />
+  <!--Cookie banner-->
+  <link rel="stylesheet" href="./assets/css/cookie-banner.css">
 
   <!-- =======================================================
   * Template Name: Imperial - v5.8.0
@@ -76,56 +76,49 @@
   </PageMap>
  -->
 
+
 </head>
 
 <body class="pointer">
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="DZm1D9V1"></script>
+
+  <!-- Cookie Banner -->
+  <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+    &#x1F36A; This website uses third-party technical cookies. 
+    By continuing to browse this site, you consent to the use of cookies. 
+    <!--Per maggiori informazioni consulta la <a href="privacy.html" target="blank">Privacy Policy</a>-->
+    <button type="button" class="btn btn-danger btn-sm ms-3" onclick="window.cb_hideCookieBanner()">
+      Accept
+    </button>
+  </div>
+  <!-- End of Cookie Banner -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
 
     <div class="container hero-container">
 
-      <!-- ======= AVVISI ======= -->
+      <!-- ======= Banner avvisi ======= -->
       <div class="alert alert-danger alert-dismissible fade show container" role="alert" hidden>
-        <strong>Avviso importante:</strong> Corpo dell'avviso.
+        <strong>Avviso:</strong> 
+        Corpo dell'avviso. 
+        
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      
-      <div class="social-pos">
-        
-        <a tabindex="0" class="btn" role="button" data-bs-toggle="popover" data-bs-placement="bottom" 
-        data-bs-trigger="focus" 
-        data-bs-html="true"
-        data-bs-content="<a href='index.html'><img src='assets/flags/it.jpeg' width='20' alt='Italian flag'></a>
-                         
-                         ">
-        <img src="assets/flags/gb.jpeg" width="20" alt="UK flag">
-        </a>
-
-        <!-- Precedente
-          data-bs-content="<a href='index.html'><img src='assets/flags/it.jpeg' width='20' alt='Italian flag'></a>
-                         <br><br>
-                         <a href='marche.html'><img src='assets/flags/marche.webp' width='20' alt='Marche flag'></a>
-                         <br><br>
-                         <a href='de.html'><img src='assets/flags/de.jpeg' width='20' alt='German flag'></a>
-                         <br><br>
-                         <a href='es.html'><img src='assets/flags/es.webp' width='20' alt='Spanish flag'></a>">
-        -->
-
-      </div>
+      <!-- Fine banner avvisi -->
     
-
-
       <div data-aos="fade-in">
-
         <div class="hero-logo">
           <img class="" src="assets/img/LOGO_STORIES.png" alt="Logo XGIOVE bianco" >
         </div>
-
       </div>
+
       <a href="#about" class="btn-scroll" title="Scroll Down">
         <h2> <i class="bi bi-chevron-double-down "></i></h2>
       </a>
+
     </div>
   </section><!-- End Hero -->
 
@@ -141,16 +134,17 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#team">Members</a></li>
           <li><a class="nav-link scrollto" href="#ascolta">Listen to us</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contacts</a></li>
-
-          <li class="dropdown"><a href="#" onclick="return false;">Downloads <i class="bi bi-chevron-down"></i></a>
+          
+          <li class="dropdown"><a href="#" onclick="return false;" hidden>Downloads <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://drive.google.com/drive/folders/1J4LyZTKDrLAsgcHf4bpGGmJD8GJY9pta?usp=share_link" target="_blank"> Press Kit  <i class="bi bi-arrow-up-right-square"></i></a> </li>
             </ul>
           </li>
 
+          <li><a class="nav-link scrollto" href="membri-eng.html">Members</a></li>
+          
           <li class="dropdown"><a href="#" onclick="return false;"><img src="assets/flags/gb.jpeg" width="20" alt="UK flag"><i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="index.html"><img src="assets/flags/it.jpeg" width="20" alt="Italian flag"></a></li>
@@ -178,76 +172,86 @@
         <div class="row align-items-center">
 
           <div class="col-md-6 about-content">
-            <!--<h1 class="section-title">About us</h1>
-            <div class="section-title-divider"></div>-->
+            <h3 class="section-title"><i class="bi bi-fire"></i></h3>
+            <div class="section-title-divider"></div>
 
             <p class="about-text">
-
               <b>XGIOVE</b> is an Italian band established in 2018. 
               Overcoming fears and tackling generational challenges are the main themes of the songs, 
               through which the band feels the need to express itself and often engage with the current music scene.
-
-              <!--
-              <b>XGIOVE</b>, a band from the Marches italian region, <b>was formed in 2018</b> following the meeting of 
-              Nicolò Buccioni, Giacomo Strappa, Andrea Massetti, Ludovico Bartolozzi and Federico Piermartire, 
-              who performed at <b>numerous concerts and events</b> under the name of <em>ContrabbanD</em>.
-              
-              They now feel the need to express themselves by writing original songs through which 
-              they can better express their own sense of identity. 
-
-              The sound is an intersection between the styles that characterize the individual components.
-
-              The most evident styles are rock and folk, with a strong presence of electronic sounds and features of world music.
-              -->
             </p>
+
             <br>
           </div>
           
           <div class="col-lg-6 about-img video">
+            
             <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Mez32aJ5poo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <!--<img src="assets/img/fotonuove/insieme-n2.webp" alt="Copertina video">
-              <a href="https://www.youtube.com/watch?v=2OH-QPr2N9k" class="glightbox stretched-link preview-link btn"><i
-                class="bi bi-play-circle"></i></a>-->
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PlHKmw4d72w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+          </div>
+            <!--<img src="assets/img/fotonuove/insieme-n2.webp" alt="Copertina video">
+            <a href="https://www.youtube.com/watch?v=2OH-QPr2N9k" class="glightbox stretched-link preview-link btn"><i
+              class="bi bi-play-circle"></i></a>-->
+              
           </div>
 
         </div>
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Subscrbe Section ======= -->
-    <section id="subscribe">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-md-12 subscribe-btn-container">
-            <h2><i class="bi bi-body-text flex-shrink-0"></i></h2>
+    <!-- ======= Riconoscimenti Section ======= -->
+    <section id="services">
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-12">
+            <h3 class="section-title-w"><i class="bi bi-award"></i></h3>
+            <div class="section-title-divider"></div>
           </div>
         </div>
-        <div class="section-title-divider"></div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <p class="subscribe-text">
-              <!--Overcoming cultural and psychological barriers, the desire for redemption that contrasts the fear of living one's passions, 
-              going beyond a life designed by others; these are some of the elements present in their lyrics.-->
+        <br>
+        <br>
 
-              XGIOVE participates in festivals, contests, and presentations; including the <b>Festival dell'Adriatico - Alex Baroni Prize</b>, 
-              where they emerged as winners, third place in <b>Sanremo Rock & Trend</b> 2019, victory in <b>Cantagiro</b> 2022, and first place in <b>TourMusicFest</b> 2022.
-            </p>
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 service-item">
+            <div class="service-icon"><i class="bi bi-balloon-heart"></i></div>
+            <h4 class="service-title"><a href="https://www.unavocepersanmarino.com/una-voce-per-san-marino-zucchero-fornaciari-annuncia-a-sorpresa-che-alcuni-finalisti-apriranno-i-suoi-concerti-evento-zucchero-diavolo-in-r-e-2/" target="_blank">Una Voce per San Marino </a></h4>
+            <p class="service-description">With the song "<em>Fuoco e Benzina</em>" they claimed the <b>third place</b> on the podium. <em>(2023)</em></p>
+          </div>
+          <div class="col-lg-4 col-md-6 service-item">
+            <div class="service-icon"><i class="bi bi-balloon-heart"></i></div>
+            <h4 class="service-title"><a href="" onclick="return false;">Tour Music Fest</a></h4>
+            <p class="service-description">First prize in the band category. <em>(2022)</em></p>
+          </div>
+          <div class="col-lg-4 col-md-6 service-item">
+            <div class="service-icon"><i class="bi bi-balloon-heart"></i></div>
+            <h4 class="service-title"><a href="" onclick="return false;">Cantagiro</a></h4>
+            <p class="service-description">First prize. <em>(2022)</em></p>
+          </div>
+          <div class="col-lg-4 col-md-6 service-item">
+            <div class="service-icon"><i class="bi bi-balloon-heart"></i></div>
+            <h4 class="service-title"><a href="https://www.sanremorock.it/index.php/i-giovanissimi-xgiove-alla-32-di-sanremo-rock/" target="_blank">Sanremo Rock & Trend</a></h4>
+            <p class="service-description">They claimed the <b>third place</b> on the podium. <em>(2019)</em></p>
+          </div>
+          <div class="col-lg-4 col-md-6 service-item">
+            <div class="service-icon"><i class="bi bi-balloon-heart"></i></div>
+            <h4 class="service-title"><a href="" onclick="return false;">Festival dell'Adriatico</a></h4>
+            <p class="service-description">They claimed the first place winning the "Alex Baroni" prize.</p>
           </div>
 
         </div>
       </div>
-    </section><!-- End Subscrbe Section -->
+    </section><!-- End Riconoscimenti Section -->
+
     <br>
-    <!-- ======= Subscrbe Section ======= -->
+
+    <!-- ======= Opening act Section ======= -->
     <section id="subscribe2">
       <div class="container" data-aos="fade-up">
-
         <div class="row">
           <div class="col-md-12 subscribe-btn-container">
-            <h2><i class="bi bi-disc flex-shrink-0"></i></h2>
+            
+            <h3 class="section-title-w"><i class="bi bi-disc flex-shrink-0"></i></h3>
           </div>
         </div>
         <div class="section-title-divider"></div>
@@ -256,59 +260,81 @@
 
           <div class="col-md-12">
             <p class="subscribe-text">
-
-              <!--The <b>sound</b> is a combination of styles, the most evident being rock and folk, 
-              with a strong presence of electronic and is embellished with diverse 
-              multicultural sounds and musical expressions.
-                         
-              The <b>sound</b> is an intersection between the lines that characterize the individual components.
-              The most evident themes are <em>rock</em> in various facets, <em>folk</em>, with the accordion as main 
-              instrument, and the contamination with various elements from the world of current music production.-->
-
-              The band has also had numerous opening act opportunities, supporting artists such as <b>Caparezza</b>, <b>Litfiba</b>, <b>Bandabardò</b>, <b>Gabry Ponte</b> and others.
-
-            </p>
+              The band has also had numerous opening act opportunities, supporting artists such as <b>Caparezza</b>, <b>Litfiba</b>, <b>Bandabardò</b>, <b>Gabry Ponte</b> and others.            </p>
           </div>
 
         </div>
+      </div>
+    </section><!-- End Opening act Section -->
+    
+    <br>
 
+    <!-- ======= Listen Section ======= -->
+    <section id="ascolta" class="ascolta section-bg">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title"><i class="bi bi-music-note-beamed"></i></h3>
+            <div class="section-title-divider"></div>
+            
+          </div>
+        </div>
+        <br>
 
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3nhEeYa7WgXv2SdDTcfnxW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <div class="row gy-4 mt-1">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <a href="https://open.spotify.com/artist/0gwlxKTRcSoc9xNEXGwECx?si=C_WYDMz2QwmCCHLh1C62EQ" target="_blank"><i class="bi bi-spotify"></i></a>
+              <a href="https://open.spotify.com/artist/0gwlxKTRcSoc9xNEXGwECx?si=C_WYDMz2QwmCCHLh1C62EQ" target="_blank"><h3>Spotify</h3></a>
+              <p><a href="https://open.spotify.com/artist/0gwlxKTRcSoc9xNEXGwECx?si=C_WYDMz2QwmCCHLh1C62EQ"
+                  target="_blank">XGIOVE</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <a href="https://www.youtube.com/channel/UCGXPvGZVE_Y56xC7qf9FJfw" target="_blank"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.youtube.com/channel/UCGXPvGZVE_Y56xC7qf9FJfw" target="_blank"><h3>YouTube</h3></a>
+              <p><a href="https://www.youtube.com/channel/UCGXPvGZVE_Y56xC7qf9FJfw" target="_blank">XGIOVE</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <a href="https://music.amazon.com/artists/B0BX1ST425/xgiove" target="_blank"><i class="fa fa-amazon"></i></a>
+              <a href="https://music.amazon.com/artists/B0BX1ST425/xgiove" target="_blank"><h3>Amazon Music</h3></a>
+              <p><a href="https://music.amazon.com/artists/B0BX1ST425/xgiove"
+                  target="_blank">XGIOVE</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <a href="https://music.apple.com/it/artist/xgiove/1673402176" target="_blank"><i class="bi bi-apple"></i></a>
+              <a href="https://music.apple.com/it/artist/xgiove/1673402176" target="_blank"><h3>Apple Music</h3></a>
+              <p><a href="https://music.apple.com/it/artist/xgiove/1673402176"
+                  target="_blank">XGIOVE</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
         
       </div>
-    </section><!-- End Subscrbe Section -->
-    <br>
-    <!-- ======= Subscrbe Section ======= -->
-    <section id="subscribe3">
-      <!--
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-md-12 subscribe-btn-container">
-            <h2><i class="bi bi-award flex-shrink-0"></i></h2>
-          </div>
-        </div>
-        <div class="section-title-divider"></div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <p class="subscribe-text">
-              They participated with their "<em>Il cuore sul cortile</em>" at the "<b>Festival dell'Adriatico</b>" - Alex Baroni Award, 
-              and were awarded <b>first place</b>.
-              On 7<sup>th</sup> June 2019 they were ranked <b>3<sup>rd</sup></b> on the podium of the <strong><a href="https://www.sanremorock.it/index.php/i-giovanissimi-xgiove-alla-32-di-sanremo-rock/" target="_blank">Sanremo Rock & Trend</a></strong> national competition.
-              During the last tour (2022) they took part in the line-up of various festivals, and were the <em>opening acts</em> at the concerts of <b>Caparezza</b>, <b>Litfiba</b> and <b>Gabry Ponte</b>.
-          </div>
-
-        </div>
-      </div>-->
-    </section><!-- End Subscrbe Section -->
+    </section><!-- End Listen Section -->
     
+    <br>
+
     <!-- ======= Sezione Membri ======= -->
-    <section id="team" class="team section-bg">
+    <section id="team" class="team section-bg" hidden>
       <div class="container" data-aos="fade-up" data-aos-delay="200">
 
         <div class="row">
           <div class="col-md-12">
-            <h3 class="section-title">Members</h3>
+            <h3 class="section-title">Membri</h3>
             <div class="section-title-divider"></div>
           </div>
         </div>
@@ -326,7 +352,7 @@
             </div>
             <div class="member-info text-center">
               <h4>Nicolò</h4>
-              <span>Vocals and Accordion</span>
+              <span>Voce e Fisarmonica</span>
             </div>
           </div><!-- End Team Member -->
 
@@ -340,7 +366,7 @@
             </div>
             <div class="member-info text-center">
               <h4>Giacomo</h4>
-              <span>Guitar</span>
+              <span>Chitarra elettrica</span>
             </div>
           </div><!-- End Team Member -->
 
@@ -355,7 +381,7 @@
             </div>
             <div class="member-info text-center">
               <h4>Andrea</h4>
-              <span>Bass</span>
+              <span>Basso</span>
             </div>
           </div><!-- End Team Member -->
 
@@ -369,7 +395,7 @@
             </div>
             <div class="member-info text-center">
               <h4>Ludovico</h4>
-              <span>Keys and Bouzouki</span>
+              <span>Tastiere e Bouzouki</span>
             </div>
           </div><!-- End Team Member -->
 
@@ -385,7 +411,7 @@
             </div>
             <div class="member-info text-center">
               <h4>Federico</h4>
-              <span>Drums</span>
+              <span>Batteria</span>
             </div>
           </div><!-- End Team Member -->
 
@@ -394,95 +420,72 @@
       </div>
     </section><!-- End Sezione Membri -->
 
-<!-- ======= Listen Section ======= -->
-<section id="ascolta" class="ascolta section-bg">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="section-title">Listen to us</h3>
-        <div class="section-title-divider"></div>
-        
-      </div>
-    </div>
-    <br>
-
-
-    <div class="row gy-4 mt-1">
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center">
-          <a href="https://www.youtube.com/channel/UCGXPvGZVE_Y56xC7qf9FJfw" target="_blank"><i class="bi bi-youtube"></i></a>
-          <a href="https://www.youtube.com/channel/UCGXPvGZVE_Y56xC7qf9FJfw" target="_blank"><h3>YouTube</h3></a>
-          <p><a href="https://www.youtube.com/channel/UCGXPvGZVE_Y56xC7qf9FJfw" target="_blank">xgiove_</a></p>
-        </div>
-      </div><!-- End Info Item -->
-
-
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center">
-          <a href="https://open.spotify.com/artist/3oHCT6UXWqxaMAjSOEd0VN?si=wKm-Nk7bSDKy1eyRZY7Z7g" target="_blank"><i class="bi bi-spotify"></i></a>
-          <a href="https://open.spotify.com/artist/3oHCT6UXWqxaMAjSOEd0VN?si=wKm-Nk7bSDKy1eyRZY7Z7g" target="_blank"><h3>Spotify</h3></a>
-          <p><a href="https://open.spotify.com/artist/3oHCT6UXWqxaMAjSOEd0VN?si=wKm-Nk7bSDKy1eyRZY7Z7g"
-              target="_blank">xgiove!</a></p>
-        </div>
-      </div><!-- End Info Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center">
-          <a href="https://music.amazon.com/artists/B07GS2HFM6/xgiove" target="_blank"><i class="fa fa-amazon"></i></a>
-          <a href="https://music.amazon.com/artists/B07GS2HFM6/xgiove" target="_blank"><h3>Amazon Music</h3></a>
-          <p><a href="https://music.amazon.com/artists/B07GS2HFM6/xgiove"
-              target="_blank">xgiove!</a></p>
-        </div>
-      </div><!-- End Info Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center">
-          <a href="https://music.apple.com/us/artist/xgiove/1433649749" target="_blank"><i class="bi bi-apple"></i></a>
-          <a href="https://music.apple.com/us/artist/xgiove/1433649749" target="_blank"><h3>Apple Music</h3></a>
-          <p><a href="https://music.apple.com/us/artist/xgiove/1433649749"
-              target="_blank">xgiove!</a></p>
-        </div>
-      </div><!-- End Info Item -->
-
-
-    </div>
-
-  </div>
-</section><!-- End Listen Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
+    <section id="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title"><i class="bi bi-share"></i></h3>
+            <div class="section-title-divider"></div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <a href="https://www.instagram.com/xgiove_/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <p>Instagram <a href="https://www.instagram.com/xgiove_/" target="_blank">@xgiove_</a></p>
+              </div>
+
+              <div>
+                <a href="https://www.facebook.com/xgiove" target="_blank"><i class="bi bi-facebook"></i></a>
+                <p>Facebook <a href="https://www.facebook.com/xgiove" target="_blank">xgiove</a></p>
+              </div>
+
+              <div>
+                <a href="https://twitter.com/xgiove_" target="_blank"><i class="bi bi-twitter"></i></a>
+                <p>Twitter <a href="https://twitter.com/xgiove_" target="_blank">@XGIOVE_</a></p>
+              </div>
+
+              <div>
+                <a href="https://vm.tiktok.com/ZMNYWHkXv/" target="_blank"><i class="bi bi-tiktok"></i></a>
+                <p>TikTok <a href="https://vm.tiktok.com/ZMNYWHkXv/" target="_blank">xgiove</a></p>
+              </div>
+
+              <div>
+                <a href="mailto:xgiove18@gmail.com"><i class="bi bi-envelope"></i></a>
+                <p><a href="mailto:xgiove18@gmail.com">xgiove18@gmail.com</a></p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8 text-center">
+            <!--Social da inserire-->
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg" hidden>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row">
           <div class="col-md-12">
-            <h3 class="section-title">Contacts</h3>
+            <h3 class="section-title"><i class="bi bi-share"></i></h3>
             <div class="section-title-divider"></div>
             
           </div>
         </div>
         <br>
-        <div class="row gy-4">
-
-
-          <div class="col-lg-12">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-
-              <a href="mailto:booking.xgiove@gmail.com"><i class="bi bi-envelope"></i></a>
-              <a href="mailto:booking.xgiove@gmail.com"><h3>Email</h3></a>
-              <p><a href="mailto:booking.xgiove@gmail.com">booking.xgiove@gmail.com</a></p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
 
         <div class="row gy-4 mt-1">
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center">
               <a href="https://www.instagram.com/xgiove_/" target="_blank"><i class="bi bi-instagram"></i></a>
               <a href="https://www.instagram.com/xgiove_/" target="_blank"><h3>Instagram</h3></a>
@@ -490,7 +493,7 @@
             </div>
           </div><!-- End Info Item -->
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="info-item  d-flex flex-column justify-content-center align-items-center">
               <a href="https://www.facebook.com/xgiove" target="_blank"><i class="bi bi-facebook"></i></a>
               <a href="https://www.facebook.com/xgiove" target="_blank"><h3>Facebook</h3></a>
@@ -498,11 +501,28 @@
             </div>
           </div><!-- End Info Item -->
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+              <a href="https://twitter.com/xgiove_" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://twitter.com/xgiove_" target="_blank"><h3>Twitter</h3></a>
+              <p><a href="https://twitter.com/xgiove_" target="_blank">xgiove_</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center">
               <a href="https://vm.tiktok.com/ZMNYWHkXv/" target="_blank"><i class="bi bi-tiktok"></i></a>
               <a href="https://vm.tiktok.com/ZMNYWHkXv/" target="_blank"><h3>TikTok</h3></a>
               <p><a href="https://vm.tiktok.com/ZMNYWHkXv/" target="_blank">xgiove</a></p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+
+              <a href="mailto:xgiove18@gmail.com"><i class="bi bi-envelope"></i></a>
+              <a href="mailto:xgiove18@gmail.com"><h3>Email</h3></a>
+              <p><a href="mailto:xgiove18@gmail.com">xgiove18@gmail.com</a></p>
             </div>
           </div><!-- End Info Item -->
 
@@ -511,7 +531,7 @@
       </div>
     </section><!-- End Contact Section -->
 
-    
+    <br>
 
   </main><!-- End #main -->
 
@@ -521,8 +541,10 @@
       <div class="row">
         <div class="col-md-12">
           <div class="copyright">
-            &copy; Copyright <strong>XGIOVE</strong>. All Rights Reserved
+            &copy; Copyright <strong>XGIOVE</strong>. All Rights Reserved.
+
           </div>
+          <div class="credits"><a href="index.html">Italiano</a> - English</div>
           <div class="credits">
             <!--
             All the links in the footer should remain intact.
@@ -540,6 +562,9 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!--Cookie banner script-->
+  <script async src="./assets/js/cookie-banner.js"></script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -548,8 +573,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
