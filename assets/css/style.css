@@ -1370,14 +1370,24 @@ section {
 /* Contact Section
 --------------------------------*/
 #contact {
-  background: #f7f7f7;
-  padding: 80px 0 120px 0;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.80)), url("../img/fotonuove2023/voce_2-6945.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0 60px 0;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  #contact {
-    background: #414040
-  }
+#contact h3{
+color: #111;
+}
+
+
+#contact p{
+  color: #111;
+}
+
+#contact a{
+  color: #c31b1b;
 }
 
 #contact .info {
@@ -1385,15 +1395,15 @@ section {
 }
 
 #contact .info i {
-  font-size: 32px;
+  font-size: 38px;
   color: #c31b1b;
   float: left;
   line-height: 0;
 }
 
 #contact .info p {
-  padding: 0 0 10px 50px;
-  line-height: 24px;
+  padding: 6px 0 8px 50px;
+  line-height: 22px;
 }
 
 #contact .php-email-form .error-message {
